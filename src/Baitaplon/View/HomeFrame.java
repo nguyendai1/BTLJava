@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author LENOVO
+ * @author daing
  */
 public class HomeFrame extends javax.swing.JFrame {
 
@@ -231,7 +231,6 @@ public class HomeFrame extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(51, 51, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/addphim.png"))); // NOI18N
         jButton2.setText("Xóa phòng");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,7 +238,7 @@ public class HomeFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(6, 119, 130, 37);
+        jButton2.setBounds(6, 119, 130, 23);
 
         jButton3.setText("Xem phòng");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -949,7 +948,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    // thêm phòng
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         int n;
@@ -966,10 +965,10 @@ public class HomeFrame extends javax.swing.JFrame {
         Phong ph = new Phong(ma,m);
         Arrphong.add(ph);
         showdata(Arrphong,modelA);
-        JOptionPane.showMessageDialog(rootPane, "Đã thêm 1 phòng");
+        JOptionPane.showMessageDialog(rootPane, "Đã thêm 1 phòng"); 
         fos.ghifile(Arrphong, "QLPHONG.TXT");
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    //xóa phòng
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         int n=Tablephong.getSelectedRow();
@@ -1010,7 +1009,7 @@ public class HomeFrame extends javax.swing.JFrame {
     private void RBChieuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBChieuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_RBChieuActionPerformed
-
+    //Thêm nhân viên
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         String Ca = "";
@@ -1084,7 +1083,7 @@ public class HomeFrame extends javax.swing.JFrame {
     private void TxtTuoiKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtTuoiKHActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtTuoiKHActionPerformed
-
+    //Thêm khách hàng
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         if(TxtTenKH.getText().trim().equals("")){
@@ -1149,7 +1148,7 @@ public class HomeFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButton10ActionPerformed
-
+    //chọn ảnh
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
         try {
@@ -1181,7 +1180,7 @@ public class HomeFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     
     }//GEN-LAST:event_TableKhachHangMouseClicked
-
+    //Lấy phim mà mình chọn
     private void TablephimMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablephimMouseClicked
         // TODO add your handling code here:
         
@@ -1192,7 +1191,7 @@ public class HomeFrame extends javax.swing.JFrame {
         txttheloai.setText(ArrPhim.get(n).gettheloai());
         txtngaychieu.setText(ArrPhim.get(n).getngaycongchieu());
     }//GEN-LAST:event_TablephimMouseClicked
-
+    //Thêm phim vào phòng
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
         int n;
@@ -1226,7 +1225,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
         
     }//GEN-LAST:event_jButton17ActionPerformed
-
+//Thêm phim
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
         System.out.println("hell");
@@ -1261,7 +1260,7 @@ public class HomeFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Thêm phim thành công.");
         }
     }//GEN-LAST:event_jButton18ActionPerformed
-
+    //Xóa phim
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
         int n = Tablephim.getSelectedRow();
@@ -1278,7 +1277,7 @@ public class HomeFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         fos.ghifile(ArrPhim, "QLPHIM.TXT");
     }//GEN-LAST:event_jButton20ActionPerformed
-
+    //làm mới bên phim
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
         ttenphim.setText("");
@@ -1287,7 +1286,7 @@ public class HomeFrame extends javax.swing.JFrame {
         labelanh.setIcon(null);
         labelanh.setText("Ảnh");
     }//GEN-LAST:event_jButton13ActionPerformed
-
+    //ảnh nhân viên
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
         try {
@@ -1304,7 +1303,7 @@ public class HomeFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Chưa chọn ảnh","Thông báo",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton16ActionPerformed
-
+    //Hiển thị nhân viên mình chọn
     private void TableNhanvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TableNhanvienMouseClicked
         // TODO add your handling code here:
         int n = TableNhanvien.getSelectedRow();
@@ -1319,7 +1318,7 @@ public class HomeFrame extends javax.swing.JFrame {
         lbluong.setText(luong);
         lbanhnv.setIcon(ResizeImage(nv.getanh(), lbanhnv));
     }//GEN-LAST:event_TableNhanvienMouseClicked
-
+    //Xóa nhân viên
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
         int n=TableNhanvien.getSelectedRow();
@@ -1332,7 +1331,7 @@ public class HomeFrame extends javax.swing.JFrame {
             fos.ghifile(ArrNhanVien, "QLNHANVIEN.TXT");
         }
     }//GEN-LAST:event_jButton14ActionPerformed
-
+    //Xóa khách hàng
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
         int n = TableKhachHang.getSelectedRow();
@@ -1345,7 +1344,7 @@ public class HomeFrame extends javax.swing.JFrame {
             fos.ghifile(ArrKhachHang, "QLKHACHHANG.TXT");
         }
     }//GEN-LAST:event_jButton22ActionPerformed
-
+    //Làm mới khách hàng
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
         TxtTenKH.setText("");
@@ -1355,7 +1354,7 @@ public class HomeFrame extends javax.swing.JFrame {
         TxtPassKH.setText("");
         TxtTenTKKH.setText("");
     }//GEN-LAST:event_jButton21ActionPerformed
-
+    //Hiển thị các đối tượng lên bảng
     public <T> void showdata(ArrayList<T> list,DefaultTableModel model){
         model.setRowCount(0);
         for(T values : list){
