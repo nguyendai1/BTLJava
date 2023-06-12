@@ -10,7 +10,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author daing
+ * @author LENOVO
  */
 public class NhanVien implements Serializable{
     private String Manv;
