@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author daing
+ * @author LENOVO
  */
 public class KhachHang extends User implements Serializable{
     public String diachi ;
